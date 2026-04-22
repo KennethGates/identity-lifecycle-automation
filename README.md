@@ -15,7 +15,7 @@ In enterprise IAM, the Joiner-Mover-Leaver (JML) lifecycle is how organizations 
 ## Architecture
 
 ![JML Lifecycle](screenshots/jml-lifecycle.png)
-```
+
 
 ## Tech Stack
 
