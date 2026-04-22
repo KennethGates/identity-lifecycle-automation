@@ -14,23 +14,8 @@ In enterprise IAM, the Joiner-Mover-Leaver (JML) lifecycle is how organizations 
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    subgraph Joiner [Joiner — status = new]
-        J1[Create account] --> J2[Assign dept groups] --> J3[Force password reset]
-    end
-    subgraph Mover [Mover — status = moved]
-        M1[Get current groups] --> M2[Compute delta\nrevoke old, grant new] --> M3[Update attributes]
-    end
-    subgraph Leaver [Leaver — status = left]
-        L1[Disable account] --> L2[Revoke sessions] --> L3[Strip all groups]
-    end
-    Joiner --> LOG[logs/actions.log]
-    Mover --> LOG
-    Leaver --> LOG
+![JML Lifecycle](screenshots/jml-lifecycle.png)
 ```
-
-## Tech Stack
 
 ## Tech Stack
 
